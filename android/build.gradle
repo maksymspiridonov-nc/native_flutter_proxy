@@ -25,6 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace "com.example.native_flutter_proxy"
+    
     compileSdkVersion 28
 
     sourceSets {
