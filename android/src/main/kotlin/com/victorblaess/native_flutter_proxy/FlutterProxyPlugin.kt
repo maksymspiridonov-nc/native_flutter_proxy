@@ -6,20 +6,19 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+// Remove this import: import io.flutter.plugin.common.PluginRegistry.Registrar
 import java.util.*
 
 /** FlutterProxyPlugin */
 public class FlutterProxyPlugin : FlutterPlugin, MethodCallHandler {
 
-    private var mMethodChannel: MethodChannel? = null;
+    private var mMethodChannel: MethodChannel? = null
 
+    // Update the companion object to use the new embedding
     companion object {
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val instance = FlutterProxyPlugin()
-            instance.onAttachedToEngine(registrar.messenger());
-        }
+        // This static function is optional and equivalent to onAttachedToEngine.
+        // It supports the old plugin registration via registrar.
+        // Don't need to update this right now if you're using the new embedding only
     }
 
     private fun onAttachedToEngine(messenger: BinaryMessenger) {
@@ -51,5 +50,4 @@ public class FlutterProxyPlugin : FlutterPlugin, MethodCallHandler {
         map["port"] = System.getProperty("http.proxyPort")
         return map
     }
-
 }
