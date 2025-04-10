@@ -1,5 +1,7 @@
 # native_flutter_proxy
 
+Fork of the original [native_flutter_proxy](https://pub.dev/packages/native_flutter_proxy) package.
+
 A flutter plugin to read network proxy info from native. It can be used to set up the network proxy for flutter.
 The plugin provides classes to provide the HttpOverrides.global property with a proxy setting.
 This ensures that the gap of flutter in supporting proxy communication is filled by a convenient solution.
@@ -12,7 +14,6 @@ You should add the following to your `pubspec.yaml` file:
 dependencies:
   native_flutter_proxy: ^0.1.14
 ```
-
 
 ## Example
 
@@ -53,8 +54,8 @@ This project is a starting point for a Flutter
 a specialized package that includes platform-specific implementation code for
 Android and/or iOS.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
 ##Credits
